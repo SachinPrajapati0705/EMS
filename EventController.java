@@ -8,12 +8,12 @@ public class EventController {
     private EventService eventService;
 
     @PostMapping("/create")
-    public Event createEvent(@RequestBody Event event) {
+    public CollegeEvent createEvent(@RequestBody Event event) {
         return eventService.createEvent(event);
     }
 
     @GetMapping("/list")
-    public List<Event> getAllEvents() {
+    public ListEvent<Event> getAllEvents() {
         return eventService.getAllEvents();
     }
 }
